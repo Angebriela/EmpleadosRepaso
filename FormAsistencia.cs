@@ -41,6 +41,22 @@ namespace Empleados
             comboBox1.DisplayMember = "nombre";
             comboBox1.ValueMember = "noEmpleado";
             comboBox1.DataSource = empleados;
+
+            Mostrar();
         }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            Asistencia asistencia = new Asistencia();
+            asistencia.noEmpleado = Convert.ToInt16(comboBox1.SelectedValue);
+            asistencia.HoraMes = Convert.ToInt16(numericUpDown1.Value);
+            asistencia.mes = Convert.ToInt16(numericUpDown2.Value);
+            asistencias.Add(asistencia);
+
+            AsistenciaArchivo asistenciaArchivo = new AsistenciaArchivo();
+            asistenciaArchivo.Guardar("../../Asistencias.json", asistencias);
+            Mostrar();
+        }
+
     }
 }
