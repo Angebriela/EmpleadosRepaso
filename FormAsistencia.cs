@@ -22,5 +22,10 @@ namespace Empleados
             this.Close();
 
         }
+
+        private void FormAsistencia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

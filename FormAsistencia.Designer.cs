@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonCerrar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // buttonCerrar
@@ -49,6 +50,7 @@
             this.Controls.Add(this.buttonCerrar);
             this.Name = "FormAsistencia";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormAsistencia_Load);
             this.ResumeLayout(false);
 
         }
@@ -56,6 +58,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCerrar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
