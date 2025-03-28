@@ -27,9 +27,8 @@ namespace Empleados
 
         private void FormEmpleado_Load(object sender, EventArgs e)
         {
-
+            Mostrar(); 
         }
-
         private void Mostrar()
         {
             EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
@@ -38,6 +37,7 @@ namespace Empleados
             dataGridView1.DataSource = empleados;
             dataGridView1.Refresh();
         }
+
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
@@ -49,12 +49,19 @@ namespace Empleados
             Empleado empleado = new Empleado();
             empleado.noEmpleado = Convert.ToInt16(numericUpDown1.Value);
             empleado.nombre = textBox1.Text;
-            empleado.sueldo = Convert.ToDecimal(maskedTextBox1.Text);
+            empleado.sueldo = Convert.ToDecimal(maskedTextBox2.Text);
             empleados.Add(empleado);
 
             EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
             empleadoArchivo.Guardar("../../Empleados.json", empleados);//Funcion guardar de clase EmpleadoArchivo
             Mostrar();
+
+        }
+
+        private void buttonReporte_Click(object sender, EventArgs e)
+        {
+            FormReporte formreporte = new FormReporte();
+            formreporte.ShowDialog();
 
         }
     }

@@ -34,11 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonReporte = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -94,14 +94,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Número de empleado:";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(195, 227);
-            this.maskedTextBox1.Mask = "+";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(230, 20);
-            this.maskedTextBox1.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,6 +120,7 @@
             this.buttonReporte.TabIndex = 12;
             this.buttonReporte.Text = "Reportes 📃";
             this.buttonReporte.UseVisualStyleBackColor = true;
+            this.buttonReporte.Click += new System.EventHandler(this.buttonReporte_Click);
             // 
             // buttonGuardar
             // 
@@ -139,17 +132,25 @@
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(195, 230);
+            this.maskedTextBox2.Mask = "000.00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(230, 20);
+            this.maskedTextBox2.TabIndex = 9;
+            // 
             // FormEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(836, 433);
+            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.buttonReporte);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label2);
@@ -174,10 +175,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonReporte;
         private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }
